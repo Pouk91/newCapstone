@@ -14,9 +14,10 @@ $(() => {
 require('./example')
 
 const authEvents = require('./auth/events.js')
-// const repairEvents = require('./repair/events.js')
+const repairEvents = require('./repair/events.js')
+
 // On document ready
 $(() => {
   authEvents.addHandlers()
-  // repairEvents.addhandlers()
+  repairEvents.addHandlers()
 })
