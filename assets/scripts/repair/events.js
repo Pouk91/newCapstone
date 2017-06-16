@@ -34,21 +34,21 @@ const onUpdateRepair = function (event) {
   .catch(ui.updateRepairFailure)
 }
 
-// const onDeleteRepair = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(this)
-//   // console.log(data.id)
-//   api.deleteRepair(data.id)
-//     .then(ui.deleteRepairSuccess)
-//     .catch(ui.deleteRepairFailure)
-// }
+const onDeleteRepair = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  // console.log(data.id)
+  api.deleteRepair(data.repair.id)
+    .then(ui.deleteRepairSuccess)
+    .catch(ui.deleteRepairFailure)
+}
 
 // event handlers
 const addHandlers = () => {
   $('#create-repair').on('submit', onCreateRepair)
   $('#get-repairs').on('submit', onGetRepairs)
   $('#update-repair').on('submit', onUpdateRepair)
-  // $('#delete-workout').on('submit', onDeleteRepair)
+  $('#delete-repair').on('submit', onDeleteRepair)
 }
 
 module.exports = {

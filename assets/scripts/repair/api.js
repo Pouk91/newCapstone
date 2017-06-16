@@ -37,19 +37,19 @@ const updateRepair = (id, data) => {
   })
 }
 
-// const deleteRepair = (id) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/repairs/' + id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const deleteRepair = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/repairs/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   createRepair,
   getRepairs,
-  updateRepair
-  // deleteRepair
+  updateRepair,
+  deleteRepair
 }

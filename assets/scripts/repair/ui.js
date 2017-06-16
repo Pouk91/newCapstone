@@ -44,20 +44,20 @@ const updateRepairFailure = (data) => {
   console.log('Fail', data)
 }
 //
-// const deleteRepairSuccess = (data) => {
+const deleteRepairSuccess = (data) => {
 //   $('#messageBanner').text('Workout Deleted!')
 //   setTimeout(function () { $('#messageBanner').text('') }, 4000)
 //   $('.content').addClass('hide-elements')
 
-//   console.log('Success')
-// }
+  console.log('Success')
+}
 //
-// const deleteRepairFailure = (data) => {
+const deleteRepairFailure = (data) => {
 //   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
 //   setTimeout(function () { $('#messageBanner').text('') }, 4000)
 
-//   console.log('Failure')
-// }
+  console.log('Failure')
+}
 
 module.exports = {
   createRepairSuccess,
@@ -65,7 +65,7 @@ module.exports = {
   getRepairsSuccess,
   getRepairsFailure,
   updateRepairSuccess,
-  updateRepairFailure
-  // deleteRepairSuccess,
-  // deleteRepairFailure
+  updateRepairFailure,
+  deleteRepairSuccess,
+  deleteRepairFailure
 }
