@@ -1,54 +1,45 @@
 'use strict'
 
 const store = require('../store.js')
-// const showWorkOutsTemplate = require('../templates/workouts.handlebars')
 
 const signUpSuccess = (data) => {
-  console.log('Success')
-  // $('#messageBanner').text('Sign up successful!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('#messageBanner').text('Sign up successful!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
-// On signup failure message appears for 2 seconds
 const signUpFailure = (data) => {
-  console.log('Fail')
-  // $('#messageBanner').text('Wrong credentials try again.')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('#messageBanner').text('Wrong credentials try again.')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log('Success')
-  // $('#messageBanner').text('Sign in successful!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('#messageBanner').text('Sign in successful!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
 const signInFailure = (data) => {
-  // $('#messageBanner').text('Wrong credentials try again!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Fail')
+  $('#messageBanner').text('Wrong credentials try again!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
 const changePasswordSuccess = (data) => {
-  // $('#messageBanner').text('Change Password Succesful!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Success')
+  $('#messageBanner').text('Change Password Succesful!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
 const changePasswordFailure = (data) => {
-  // $('#messageBanner').text('Same password try again!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Fail')
+  $('#messageBanner').text('Same password try again!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
 }
 
 const signOutSuccess = (data) => {
-  // $('#messageBanner').text('See You Next Time!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Success')
+  $('#messageBanner').text('See You Next Time!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('.content').empty()
 }
 
 const signOutFailure = (data) => {
-  console.log('Fail')
 }
 
 module.exports = {

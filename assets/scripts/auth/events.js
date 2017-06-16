@@ -4,6 +4,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 
 const api = require('./api')
 const ui = require('./ui')
+const repairEvents = require('../repair/events')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
@@ -18,6 +19,7 @@ const onSignIn = function (event) {
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(repairEvents.onGetRepairs)
     .catch(ui.signInFailure)
 }
 
