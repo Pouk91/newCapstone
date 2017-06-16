@@ -12,16 +12,19 @@ const onCreateRepair = function (event) {
   console.log(data)
   api.createRepair(data)
     .then(ui.createRepairSuccess)
+    .then(onGetRepairs)
     .catch(ui.createRepairFailure)
 }
 
 const onGetRepairs = function (event) {
   // console.log('success')
-  event.preventDefault()
+  if (event) {
+    event.preventDefault()
+  }
   // const data = getFormFields(this)
   api.getRepairs()
-  .then(ui.getRepairsSuccess)
-  .catch(ui.getRepairsFailure)
+    .then(ui.getRepairsSuccess)
+    .catch(ui.getRepairsFailure)
 }
 
 const onUpdateRepair = function (event) {
@@ -30,8 +33,9 @@ const onUpdateRepair = function (event) {
   const id = data.repair.id
   // debugger;
   api.updateRepair(id, data)
-  .then(ui.updateRepairSuccess)
-  .catch(ui.updateRepairFailure)
+    .then(ui.updateRepairSuccess)
+    .then(onGetRepairs)
+    .catch(ui.updateRepairFailure)
 }
 
 const onDeleteRepair = function (event) {
@@ -40,6 +44,7 @@ const onDeleteRepair = function (event) {
   // console.log(data.id)
   api.deleteRepair(data.repair.id)
     .then(ui.deleteRepairSuccess)
+    .then(onGetRepairs)
     .catch(ui.deleteRepairFailure)
 }
 
@@ -52,5 +57,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onGetRepairs
 }

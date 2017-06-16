@@ -5,10 +5,9 @@ const showRepairsTemplate = require('../templates/repairs.handlebars')
 
 const createRepairSuccess = (data) => {
   console.log('succes')
-  // $('#messageBanner').text('Workout Created!')
-  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  // store.workout = data.workout
-  console.log(data, 'createRepairs')
+  $('#messageBanner').text('Repair Created!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  // console.log(data, 'createRepairs')
 }
 
 const createRepairFailure = (data) => {
