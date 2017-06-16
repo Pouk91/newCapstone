@@ -1,7 +1,7 @@
 Capstone
 # newCapstone
 
-!['application' View](<blockquote class="imgur-embed-pub" lang="en" data-id="a/LUvW5"><a href="//imgur.com/LUvW5"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+!['application' View](http://imgur.com/a/LUvW5)
 
 Technologies:
 HTML, CSS, Jquery, AJAX, Ruby on Rails
