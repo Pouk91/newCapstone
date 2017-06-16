@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
-// const showWorkOutsTemplate = require('../templates/workouts.handlebars')
+const showRepairsTemplate = require('../templates/repairs.handlebars')
 
 const createRepairSuccess = (data) => {
   console.log('succes')
@@ -18,9 +18,9 @@ const createRepairFailure = (data) => {
 const getRepairsSuccess = (data) => {
 // //   $('#messageBanner').text('Here are your workouts')
 //   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-//   $('.content').empty()
-//   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
-//   $('.content').append(showWorkOutsHtml)
+  $('.content').empty()
+  const showRepairsHTML = showRepairsTemplate({ repairs: data.repairs })
+  $('.content').append(showRepairsHTML)
 //   $('.content').removeClass('hide-elements')
   console.log('Success', data)
 }
