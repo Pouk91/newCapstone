@@ -28,6 +28,11 @@ const signInSuccess = (data) => {
   store.user = data.user
   $('#messageBanner').text('Sign in successful!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('#sign-up').addClass('hide-elements')
+  $('#sign-in').addClass('hide-elements')
+  $('#change-password').removeClass('hide-elements')
+  $('#sign-out').removeClass('hide-elements')
+  $('#create-repair').removeClass('hide-elements')
   resetFormField()
 }
 
@@ -53,6 +58,13 @@ const signOutSuccess = (data) => {
   $('#messageBanner').text('See You Next Time!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').empty()
+  $('#change-password').addClass('hide-elements')
+  $('#sign-out').addClass('hide-elements')
+  $('#sign-in').removeClass('hide-elements')
+  $('#sign-up').removeClass('hide-elements')
+  $('#create-repair').addClass('hide-elements')
+  $('#update-repair').addClass('hide-elements')
+  $('#delete-repair').addClass('hide-elements')
   resetFormField()
 }
 

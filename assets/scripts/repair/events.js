@@ -54,6 +54,9 @@ const addHandlers = () => {
   $('#get-repairs').on('submit', onGetRepairs)
   $('#update-repair').on('submit', onUpdateRepair)
   $('#delete-repair').on('submit', onDeleteRepair)
+  $('#create-repair').addClass('hide-elements')
+  $('#update-repair').addClass('hide-elements')
+  $('#delete-repair').addClass('hide-elements')
 }
 
 module.exports = {

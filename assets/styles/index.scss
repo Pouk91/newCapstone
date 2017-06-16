@@ -9,3 +9,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
       display: inline-block;
     }
 }
+
+h1, .content, #sign-up, #sign-in, #change-password, #sign-out, #create-repair, #delete-repair, #update-repair, #messageBanner {
+  text-align: center;
+}
+
+.hide-elements {
+  display: none;
+}

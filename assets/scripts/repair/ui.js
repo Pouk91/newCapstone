@@ -16,6 +16,8 @@ const resetFormField = function () {
 const createRepairSuccess = (data) => {
   $('#messageBanner').text('Repair Created!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  $('#update-repair').removeClass('hide-elements')
+  $('#delete-repair').removeClass('hide-elements')
   resetFormField()
 }
 

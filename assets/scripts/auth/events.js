@@ -45,6 +45,8 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#change-password').addClass('hide-elements')
+  $('#sign-out').addClass('hide-elements')
 }
 
 module.exports = {
