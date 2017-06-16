@@ -1,7 +1,7 @@
 Capstone
 # newCapstone
 
-file:///home/pouk09/Pictures/Capstone.png
+!['application' View](file:///home/pouk09/Pictures/Capstone.png)
 
 Technologies:
 HTML, CSS, Jquery, AJAX, Ruby on Rails
