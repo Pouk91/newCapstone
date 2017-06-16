@@ -3,59 +3,63 @@
 const store = require('../store.js')
 const showRepairsTemplate = require('../templates/repairs.handlebars')
 
+const resetFormField = function () {
+  document.getElementById('sign-up').reset()
+  document.getElementById('sign-in').reset()
+  document.getElementById('change-password').reset()
+  document.getElementById('sign-out').reset()
+  document.getElementById('create-repair').reset()
+  document.getElementById('update-repair').reset()
+  document.getElementById('delete-repair').reset()
+}
+
 const createRepairSuccess = (data) => {
-  console.log('succes')
   $('#messageBanner').text('Repair Created!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  // console.log(data, 'createRepairs')
+  resetFormField()
 }
 
 const createRepairFailure = (data) => {
-  console.log(data)
+  $('#messageBanner').text('Failed to create Repair!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  resetFormField()
 }
 
 const getRepairsSuccess = (data) => {
-// //   $('#messageBanner').text('Here are your workouts')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').empty()
   const showRepairsHTML = showRepairsTemplate({ repairs: data.repairs })
   $('.content').append(showRepairsHTML)
-//   $('.content').removeClass('hide-elements')
-  console.log('Success', data)
+  resetFormField()
 }
-//
+
 const getRepairsFailure = (data) => {
-//   $('#messageBanner').text('No workouts saved, enter some to start!')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Failure', data)
+  resetFormField()
 }
 
 const updateRepairSuccess = (data) => {
-//   $('#messageBanner').text('Workout Updated!')
-  // setTimeout(function () { $('#messageBaner').text('') }, 4000)
+  $('#messageBanner').text('Repair Updated!')
+  setTimeout(function () { $('#messageBaner').text('') }, 4000)
 //   $('.content').addClass('hide-elements')
-  console.log('Success', data)
+  resetFormField()
 }
 
 const updateRepairFailure = (data) => {
-//   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  console.log('Fail', data)
+  $('#messageBanner').text('Couldn\'t Update Repair!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  resetFormField()
 }
-//
+
 const deleteRepairSuccess = (data) => {
-//   $('#messageBanner').text('Workout Deleted!')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-//   $('.content').addClass('hide-elements')
-
-  console.log('Success')
+  $('#messageBanner').text('Repair Deleted!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  // $('.content').addClass('hide-elements')
+  resetFormField()
 }
-//
-const deleteRepairFailure = (data) => {
-//   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
 
-  console.log('Failure')
+const deleteRepairFailure = (data) => {
+  $('#messageBanner').text('Provide an ID!')
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  resetFormField()
 }
 
 module.exports = {
