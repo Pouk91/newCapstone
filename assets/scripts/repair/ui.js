@@ -5,8 +5,8 @@ const store = require('../store.js')
 
 const createRepairSuccess = (data) => {
   console.log('succes')
-  $('#messageBanner').text('Workout Created!')
-  setTimeout(function () { $('#messageBanner').text('') }, 4000)
+  // $('#messageBanner').text('Workout Created!')
+  // setTimeout(function () { $('#messageBanner').text('') }, 4000)
   // store.workout = data.workout
   console.log(data, 'createRepairs')
 }
@@ -30,21 +30,19 @@ const getRepairsFailure = (data) => {
 //   setTimeout(function () { $('#messageBanner').text('') }, 4000)
   console.log('Failure', data)
 }
-//
-// const updateRepairSuccess = (data) => {
-//   $('#messageBanner').text('Workout Updated!')
-//   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-//   $('.content').addClass('hide-elements')
 
-//   console.log('Success')
-// }
-//
-// const updateRepairFailure = (data) => {
+const updateRepairSuccess = (data) => {
+//   $('#messageBanner').text('Workout Updated!')
+  // setTimeout(function () { $('#messageBaner').text('') }, 4000)
+//   $('.content').addClass('hide-elements')
+  console.log('Success', data)
+}
+
+const updateRepairFailure = (data) => {
 //   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
 //   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-
-//   console.log('Fail')
-// }
+  console.log('Fail', data)
+}
 //
 // const deleteRepairSuccess = (data) => {
 //   $('#messageBanner').text('Workout Deleted!')
@@ -65,9 +63,9 @@ module.exports = {
   createRepairSuccess,
   createRepairFailure,
   getRepairsSuccess,
-  getRepairsFailure
-  // updateRepairSuccess,
-  // updateRepairFailure,
+  getRepairsFailure,
+  updateRepairSuccess,
+  updateRepairFailure
   // deleteRepairSuccess,
   // deleteRepairFailure
 }

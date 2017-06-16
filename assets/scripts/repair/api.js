@@ -25,18 +25,18 @@ const getRepairs = () => {
     }
   })
 }
-//
-// const updateRepair = (id, data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/repairs/' + id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
+
+const updateRepair = (id, data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/repairs/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 // const deleteRepair = (id) => {
 //   return $.ajax({
 //     url: config.apiOrigin + '/repairs/' + id,
@@ -49,7 +49,7 @@ const getRepairs = () => {
 
 module.exports = {
   createRepair,
-  getRepairs
-  // updateRepair,
+  getRepairs,
+  updateRepair
   // deleteRepair
 }
