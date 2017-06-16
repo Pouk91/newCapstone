@@ -15,16 +15,16 @@ const createRepair = (data) => {
   })
 }
 
-// const getRepairs = () => {
-//   // console.log('success')
-//   return $.ajax({
-//     url: config.apiOrigin + '/repairs',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const getRepairs = () => {
+  // console.log('success')
+  return $.ajax({
+    url: config.apiOrigin + '/repairs',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 //
 // const updateRepair = (id, data) => {
 //   return $.ajax({
@@ -48,8 +48,8 @@ const createRepair = (data) => {
 // }
 
 module.exports = {
-  createRepair
-  // getRepairs,
+  createRepair,
+  getRepairs
   // updateRepair,
   // deleteRepair
 }

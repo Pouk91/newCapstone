@@ -15,15 +15,15 @@ const onCreateRepair = function (event) {
     .catch(ui.createRepairFailure)
 }
 
-// const onGetRepairs = function (event) {
-//   // console.log('success')
-//   event.preventDefault()
-//   // const data = getFormFields(this)
-//   api.getRepairs()
-//   .then(ui.getRepairsSuccess)
-//   .catch(ui.getRepairsFailure)
-// }
-//
+const onGetRepairs = function (event) {
+  // console.log('success')
+  event.preventDefault()
+  // const data = getFormFields(this)
+  api.getRepairs()
+  .then(ui.getRepairsSuccess)
+  .catch(ui.getRepairsFailure)
+}
+
 // const onUpdateRepair = function (event) {
 //   event.preventDefault()
 //   const data = getFormFields(this)
@@ -46,7 +46,7 @@ const onCreateRepair = function (event) {
 // event handlers
 const addHandlers = () => {
   $('#create-repair').on('submit', onCreateRepair)
-  // $('#get-workouts').on('submit', getRepairs)
+  $('#get-repairs').on('submit', onGetRepairs)
   // $('#update-workout').on('submit', onUpdateRepair)
   // $('#delete-workout').on('submit', onDeleteRepair)
 }
