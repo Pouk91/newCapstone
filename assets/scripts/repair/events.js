@@ -3,6 +3,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
+const updateRepairs = require('../templates/update-repair.handlebars')
 
 const onCreateRepair = function (event) {
   event.preventDefault()
@@ -34,6 +35,15 @@ const onUpdateRepair = function (event) {
     .catch(ui.updateRepairFailure)
 }
 
+const toUpdateRepair = function (event) {
+  console.log(event.target.dataset.id)
+  event.preventDefault()
+  $('#content').empty()
+  $('#content').append(updateRepairs)
+  $('.repairId').val(event.target.dataset.id)
+  $('.repairId').css('display', 'none')
+}
+
 const onDeleteRepair = function (event) {
   event.preventDefault()
   const repairId = $(event.target).attr('repairId')
@@ -48,7 +58,8 @@ const onDeleteRepair = function (event) {
 const addHandlers = () => {
   $('#create-repair').on('submit', onCreateRepair)
   $('#get-repairs').on('submit', onGetRepairs)
-  $('#update-repair').on('submit', onUpdateRepair)
+  $('#content').on('submit', '#update-repair', onUpdateRepair)
+  $('#content').on('click', '.update-repair-button', toUpdateRepair)
   $('#content').on('click', '.delete-repair-button', onDeleteRepair)
   $('#create-repair').addClass('hide-elements')
   $('#update-repair').addClass('hide-elements')

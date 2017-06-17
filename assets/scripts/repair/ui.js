@@ -2,7 +2,6 @@
 
 const store = require('../store.js')
 const showRepairsTemplate = require('../templates/repairs.handlebars')
-const showDeleteRepairTemplate = require('../templates/delete-repair.handlebars')
 
 const resetFormField = () => {
   $('form#sign-up').trigger('reset')
