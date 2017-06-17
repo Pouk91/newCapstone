@@ -4,7 +4,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createRepair = (data) => {
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiOrigin + '/repairs',
     method: 'POST',
@@ -26,8 +25,6 @@ const getRepairs = () => {
 }
 
 const updateRepair = (id, data) => {
-  console.log('id is ', id)
-  console.log('data is ', data)
   return $.ajax({
     url: config.apiOrigin + '/repairs/' + id,
     method: 'PATCH',
@@ -39,7 +36,6 @@ const updateRepair = (id, data) => {
 }
 
 const deleteRepair = (id) => {
-  console.log('id is ', id)
   return $.ajax({
     url: config.apiOrigin + '/repairs/' + id,
     method: 'DELETE',

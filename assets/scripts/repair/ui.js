@@ -38,7 +38,7 @@ const getRepairsFailure = (data) => {
 
 const updateRepairSuccess = (data) => {
   $('#messageBanner').text('Repair Updated!')
-  setTimeout(function () { $('#messageBaner').text('') }, 4000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
 }
 
@@ -49,10 +49,8 @@ const updateRepairFailure = (data) => {
 }
 
 const deleteRepairSuccess = (id) => {
-  console.log('id is ', id)
   $('#messageBanner').text('Repair Deleted!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  // $('#content').addClass('hide-elements')
   resetFormField()
 }
 

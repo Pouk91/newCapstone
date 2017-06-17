@@ -8,7 +8,6 @@ const updateRepairs = require('../templates/update-repair.handlebars')
 const onCreateRepair = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log('data is ', data)
   api.createRepair(data)
     .then(ui.createRepairSuccess)
     .then(onGetRepairs)
@@ -27,7 +26,6 @@ const onGetRepairs = function (event) {
 const onUpdateRepair = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log('data is ', data)
   const id = data.repair.id
   api.updateRepair(id, data)
     .then(ui.updateRepairSuccess)
@@ -36,7 +34,6 @@ const onUpdateRepair = function (event) {
 }
 
 const toUpdateRepair = function (event) {
-  console.log(event.target.dataset.id)
   event.preventDefault()
   $('#content').empty()
   $('#content').append(updateRepairs)
@@ -47,7 +44,6 @@ const toUpdateRepair = function (event) {
 const onDeleteRepair = function (event) {
   event.preventDefault()
   const repairId = $(event.target).attr('repairId')
-  console.log('data is ', repairId)
   api.deleteRepair(repairId)
     .then(ui.deleteRepairSuccess)
     .then(onGetRepairs)
