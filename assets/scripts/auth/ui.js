@@ -2,14 +2,14 @@
 
 const store = require('../store.js')
 
-const resetFormField = function () {
-  document.getElementById('sign-up').reset()
-  document.getElementById('sign-in').reset()
-  document.getElementById('change-password').reset()
-  document.getElementById('sign-out').reset()
-  document.getElementById('create-repair').reset()
-  document.getElementById('update-repair').reset()
-  document.getElementById('delete-repair').reset()
+const resetFormField = () => {
+  $('form#sign-up').trigger('reset')
+  $('form#sign-in').trigger('reset')
+  $('form#sign-out').trigger('reset')
+  $('form#change-password').trigger('reset')
+  $('form#create-repair').trigger('reset')
+  $('form#update-repair').trigger('reset')
+  $('form#delete-repair').trigger('reset')
 }
 
 const signUpSuccess = (data) => {
@@ -57,7 +57,7 @@ const changePasswordFailure = (data) => {
 const signOutSuccess = (data) => {
   $('#messageBanner').text('See You Next Time!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  $('.content').empty()
+  $('#content').empty()
   $('#change-password').addClass('hide-elements')
   $('#sign-out').addClass('hide-elements')
   $('#sign-in').removeClass('hide-elements')

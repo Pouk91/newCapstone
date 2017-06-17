@@ -2,22 +2,21 @@
 
 const store = require('../store.js')
 const showRepairsTemplate = require('../templates/repairs.handlebars')
+const showDeleteRepairTemplate = require('../templates/delete-repair.handlebars')
 
-const resetFormField = function () {
-  document.getElementById('sign-up').reset()
-  document.getElementById('sign-in').reset()
-  document.getElementById('change-password').reset()
-  document.getElementById('sign-out').reset()
-  document.getElementById('create-repair').reset()
-  document.getElementById('update-repair').reset()
-  document.getElementById('delete-repair').reset()
+const resetFormField = () => {
+  $('form#sign-up').trigger('reset')
+  $('form#sign-in').trigger('reset')
+  $('form#sign-out').trigger('reset')
+  $('form#change-password').trigger('reset')
+  $('form#create-repair').trigger('reset')
+  $('form#update-repair').trigger('reset')
+  $('form#delete-repair').trigger('reset')
 }
 
 const createRepairSuccess = (data) => {
   $('#messageBanner').text('Repair Created!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  $('#update-repair').removeClass('hide-elements')
-  $('#delete-repair').removeClass('hide-elements')
   resetFormField()
 }
 
@@ -28,9 +27,9 @@ const createRepairFailure = (data) => {
 }
 
 const getRepairsSuccess = (data) => {
-  $('.content').empty()
+  $('#content').empty()
   const showRepairsHTML = showRepairsTemplate({ repairs: data.repairs })
-  $('.content').append(showRepairsHTML)
+  $('#content').append(showRepairsHTML)
   resetFormField()
 }
 
@@ -41,7 +40,7 @@ const getRepairsFailure = (data) => {
 const updateRepairSuccess = (data) => {
   $('#messageBanner').text('Repair Updated!')
   setTimeout(function () { $('#messageBaner').text('') }, 4000)
-//   $('.content').addClass('hide-elements')
+//   $('#content').addClass('hide-elements')
   resetFormField()
 }
 
@@ -51,10 +50,11 @@ const updateRepairFailure = (data) => {
   resetFormField()
 }
 
-const deleteRepairSuccess = (data) => {
+const deleteRepairSuccess = (id) => {
+  console.log('id is ', id)
   $('#messageBanner').text('Repair Deleted!')
   setTimeout(function () { $('#messageBanner').text('') }, 4000)
-  // $('.content').addClass('hide-elements')
+  // $('#content').addClass('hide-elements')
   resetFormField()
 }
 
