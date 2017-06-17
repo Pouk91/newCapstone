@@ -39,7 +39,6 @@ const getRepairsFailure = (data) => {
 const updateRepairSuccess = (data) => {
   $('#messageBanner').text('Repair Updated!')
   setTimeout(function () { $('#messageBaner').text('') }, 4000)
-//   $('#content').addClass('hide-elements')
   resetFormField()
 }
 
