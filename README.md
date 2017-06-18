@@ -47,6 +47,6 @@ PO Car Repair Management is a web application developed to help users maintain c
 # Screenshot
   !['application' View](http://imgur.com/2kunVd6.png)
 
-[Deployed Web Application](https://pouk91.github.io/newCapstone/)
-[Deployed Back-end](https://stormy-crag-69533.herokuapp.com/)
-[Backend Repo](https://github.com/Pouk91/newCapstoneAPi)
+- [Deployed Web Application](https://pouk91.github.io/newCapstone/)
+- [Deployed Back-end](https://stormy-crag-69533.herokuapp.com/)
+- [Backend Repo](https://github.com/Pouk91/newCapstoneAPi)
