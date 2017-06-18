@@ -21,14 +21,14 @@ PO Car Repair Management is a web application developed to help users maintain c
   NPM dependencies installed to execute grunt server for test environment and grunt deploy to deploy prod environment.
 
   - sudo npm install(ubuntu)
-  - npm install1
+  - npm install
 
 # User Stores:
 
   - As a want I want users to be able to log a repair.
   - As a want I want users to be able to update a repair.
   - As a want I want users to be able to delete a repair.
-  - As a want I want user to be able to see a list of their logged repairs.
+  - As a want I want users to be able to see a list of their logged repairs.
 
 # Wireframe:
 
